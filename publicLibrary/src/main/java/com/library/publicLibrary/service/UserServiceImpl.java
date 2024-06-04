@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService{
         userModel.setPassword(users.getPassword());
         userModel.setRole(users.getRole());
         userModel.setUsername(users.getUsername());
+        userModel.setEmail(users.getEmail());
         return userRepo.save(userModel);
     }
 
@@ -35,6 +36,13 @@ public class UserServiceImpl implements UserService{
     @Override
     public Optional<User> findByUsersId(Long userId) {
         return userRepo.findById(userId);
+    }
+
+    @Override
+    public String deleteUserId(Integer userId) {
+
+        userRepo.deleteById(Long.valueOf(userId));
+        return "Success";
     }
 
 

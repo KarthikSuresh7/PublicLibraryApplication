@@ -31,4 +31,11 @@ public class UserController {
     public ResponseEntity<?> findById(@RequestParam Long userId){
         return ResponseEntity.ok(userService.findByUsersId(userId));
     }
+
+    @DeleteMapping("/delete/{userId}")
+    public String deleteById(@PathVariable Integer userId){
+
+                userService.deleteUserId(userId);
+        return "Successfully deleted";
+    }
 }

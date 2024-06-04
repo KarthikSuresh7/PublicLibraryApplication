@@ -21,6 +21,8 @@ public class BookController {
         return ResponseEntity.ok(bookService.addBook(bookInput));
     }
 
+
+
     @GetMapping("/allBook")
     public ResponseEntity<List<Book>>findAllBooks(){
         return ResponseEntity.ok(bookService.findAllBook());

@@ -16,4 +16,5 @@ public interface UserService {
     Optional<User> findByUsersId(Long userId);
 
 
+    String deleteUserId(Integer userId);
 }
