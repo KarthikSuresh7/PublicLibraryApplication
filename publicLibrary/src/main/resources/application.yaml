@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: publicLibrary
+
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=springDataBase;CharacterSet=UTF-8;encrypt=false;trustServerCertificate=true
+    username: customer
+    password: 123456
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+        connection:
+          characterEncoding: UTF-8
+          useUnicode: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: skarthikpec@gmail.com
+    password: jvam aihz weth xmmx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
