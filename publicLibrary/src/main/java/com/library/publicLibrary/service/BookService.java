@@ -13,4 +13,8 @@ public interface BookService {
     Book findBookById(Long bookId);
 
     List<Book> findAllBook();
+
+    Book updateBook(BookInput bookInput,Long bookId);
+
+    String deleteById(Long bookId);
 }

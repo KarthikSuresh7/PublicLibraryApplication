@@ -21,10 +21,16 @@ public class BookController {
         return ResponseEntity.ok(bookService.addBook(bookInput));
     }
 
-
+    @PutMapping("/update/{bookId}")
+    public  ResponseEntity<Book> updateBook(@PathVariable Long bookId ,@RequestBody BookInput bookInput){
+        return ResponseEntity.ok(bookService.updateBook(bookInput,bookId));
+    }
 
     @GetMapping("/allBook")
     public ResponseEntity<List<Book>>findAllBooks(){
         return ResponseEntity.ok(bookService.findAllBook());
     }
+
+
+
 }
