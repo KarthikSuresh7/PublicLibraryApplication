@@ -23,8 +23,8 @@ public class SchedulerController {
     private EmailController emailController;
 
 
-   @PostMapping("/mails")
-  //  @Scheduled(cron = "0 0 8 * * ?")//Job runs everyday at 8am
+  // @PostMapping("/mails")
+    @Scheduled(cron = "0 0 8 * * ?")//Job runs everyday at 8am
 //    At the 0th second,
 //    At the 0th minute,
 //    At the 8th hour (8 AM),
